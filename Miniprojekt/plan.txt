@@ -1,0 +1,17 @@
+Login.html:
+	login ? session variable 
+	create account
+
+forums.html:
+	show all forums
+	each forum is linked to it's own forum.html
+
+forum.html:
+	show comments
+	enable user to post
+
+mysql code:
+	CREATE TABLE accounts(
+		nickname varchar(50),
+		password varchar(50)
+	)

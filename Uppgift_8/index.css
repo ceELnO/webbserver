@@ -1,0 +1,50 @@
+html{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.forum_container{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color:#3ac0c9;
+    opacity: 0.7;
+
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 25px;
+}
+
+.forum_container input[type=text], .forum_container textarea{
+    width: 100%;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 1000;
+    padding: 5px;
+}
+
+.forum_container textarea{
+    height: 200px;
+}
+
+.forum_container label{
+    height: auto;
+}
+
+.forum_container input[type=submit]{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;;
+}
+
+.forum_container input[type=submit]:hover{
+    background-color: red;
+}
+
+

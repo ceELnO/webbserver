@@ -1,0 +1,55 @@
+/* --------------------- index style -------------------- */
+
+html{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* -------------------- Header ---------------------------*/
+
+.header{
+    width: 80%;
+    margin: auto;
+}
+.header h1{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* -------------------- Forum --------------------------- */
+
+/* Container */
+.forum_container {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+/* Input */
+input[type=text] {
+    width: 100%;
+    padding: 12px; 
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+}
+input[type=submit] {
+    background-image: linear-gradient(deeppink, deeppink);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Change colors on hover */
+input[type=submit]:hover {
+    background-image: linear-gradient( lime, yellow);
+}
+
+/* --------------------- responsive --------------------------- */
+/*Makes everything full size */
+@media screen and (max-width:800px) {
+    .forum_container, .header{
+        width: 100%;
+    }
+}

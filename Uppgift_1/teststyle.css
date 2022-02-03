@@ -1,0 +1,63 @@
+/* --------------------- container ------------------- */
+.main{
+    width:80%;
+    max-width: 1440px;
+    margin: auto;
+}
+@media screen and (max-width: 800px) {
+    .main{
+        width: 100%;
+    }
+}
+
+/* --------------------- text ---------------------- */
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
+}
+
+/* används för vissa paragrafer */
+.uppgift1{
+    text-align: center;
+}
+.what{
+    text-align: center;
+    font-size: large;
+}
+
+/* ------------------ sections --------------------- */
+.rubrik{
+    width:100%;
+    height:auto;
+}
+.uppgift{
+    width:100%;
+    height: auto;        
+}
+.uppgift hr, .rubrik hr{
+    width: 80%;
+    height: 2px;
+    background-color: black;
+}
+
+/* -------------------- table styling ----------------- */
+
+#table001{
+    margin:auto;
+    width: 90%;
+    max-width: 700px;
+}
+#table001 tr, #table001 td, #table001 th{
+    padding:8px;
+}
+#table001 th{
+    background-color: black;
+    color: white;
+    text-align: left;
+}
+#table001, #table001 th, #table001 td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
