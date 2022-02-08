@@ -1,7 +1,0 @@
-# webbserver
-[x] => x kan ändras, exempel x = 1, 2, 3,...
-
-mappar:
-  Miniprojekt: en större uppgift;
-  Uppgift_[x]: mindre inlämningsuppgifter;
-  Prov: olika annteckningar och test, kanske borde ta bort dessa;
