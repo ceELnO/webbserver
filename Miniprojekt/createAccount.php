@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     if ($_POST["password"] == $_POST["passwordconfirm"]){
         check_account();
     }
@@ -39,28 +41,18 @@
 
         if ($succes == true){
             $conn = new mysqli($servername, $username, $password, $dbname);
-            $sql = "INSERT INTO accounts (username, password) VALUES ($_POST[username], $_POST[password])";
+            $sql = "INSERT INTO accounts (username, password) VALUES ('$_POST[username]', '$_POST[password]')";
 
-            $conn->query($sql);
+            //$conn->query($sql);
             
             if ($conn->query($sql) === TRUE) {
-                echo "New record created successfully";
-              } else {
+                echo "Account created succesfully";
+                $_SESSION["username"] = $_POST["username"];
+                include ("forms.php");
+            } 
+            else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
-              }
-
-            /*
-            if(mysqli_query($conn, $sql)){
-                echo "account succesfully created <br> <br>";
-                include ("../forms/forms.html");
             }
-            else{
-                echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
-                include ("createAccounts.html");
-            }
-
-            $conn->close();
-            */
             $conn->close();
         }
         else{

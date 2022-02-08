@@ -30,7 +30,7 @@
         session_start();
         $_session["username"] = $_POST["username"];
         echo "login successful <br> <br>";
-        include ("../forms/forms.html");
+        header("Location: forms.php");
     }
     else{
         echo "login failed <br> <br>";
