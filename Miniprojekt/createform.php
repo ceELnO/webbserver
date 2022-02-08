@@ -1,10 +1,9 @@
 <?php
     session_start();
-    /*
-    $_POST["title"];
-    $_POST["description"];
-    $_SESSION["username"];
-    */
+    
+    $title = $_POST["title"];
+    $description = $_POST["description"];
+    $username = $_SESSION['username'];
 
     $servername = "localhost";
     $username = "root";
@@ -17,7 +16,7 @@
     }
 
     // add input to database
-    $sql = "INSERT INTO forms (title, description, user) VALUES('$_POST[title]', '$_POST[description]', '$_SESSION[username]')";
+    $sql = "INSERT INTO forms (title, description, user) VALUES('$title', '$description', '$username')";
     $conn->query($sql);
 
     // find the id

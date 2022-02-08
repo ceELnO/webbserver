@@ -15,20 +15,6 @@
         very good
     </h1>
 
-    <div class = "create_form">
-        <form action = "createform.php">
-            <label for = "title"> Title: </label>
-            <input type = "text" name = "title">
-            <br> <br>
-
-            <label for = "description"> Description: </label>
-            <input type = "textarea" name = "description">
-            <br> <br>
-
-            <input type = "submit" value = "Submit">
-        </form>
-    </div>
-
     <?php
         $servername = "localhost";
         $username = "root";
