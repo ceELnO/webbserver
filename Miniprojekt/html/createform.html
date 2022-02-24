@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Form</title>
+    <link rel="icon" href="../img/Logo.png">
+
+    <!-- External Links-->
+    <link href = "../css/main.css" type = "text/css" rel = "stylesheet">
+    <link href = "../css/description.css" type = "text/css" rel = "stylesheet">
+</head>
+<body>
+    
+    <!--_***PHP_Goes_Here***_-->
+
+    <div class = "left_margin">
+        <h3> Create a Form</h3>
+
+        <form action = "createFormTry.php" method = "post" >
+            <label for = "title"> Title: </label> <br>
+            <input type = "text" name = "title" require>
+            <br> <br>
+    
+            <label for = "description"> Description: </label> <br>
+            <input type = "textarea" name = "description" require>
+            <br> <br>
+    
+            <input type = "submit" value = "Submit">
+        </form>
+
+        <br>
+
+        <div class = "redirect">
+            <a href = "forms.php">
+                View Already Existing Forms
+            </a> 
+        </div>     
+
+    </div>
+
+
+
+
+</body>
+</html>

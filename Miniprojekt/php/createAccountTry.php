@@ -1,15 +1,23 @@
 <?php
     session_start();
 
-    if ($_POST["password"] == $_POST["passwordconfirm"]){
-        check_account();
-    }
-    else{
-        echo "passwords does not match, please try again <br> <br>";
-        include ("createAccount.html");
+    // error message function
+    function createAccountError($message){
+        $html = file_get_contents("../html/createAccount.html");
+        $header = file_get_contents("../txt/header.txt");
+        $error = file_get_contents("../txt/errorbox.txt");
+    
+        $error = str_replace("***text_message***", $message, $error);
+
+        $content = $header;
+        $content .= $error;
+    
+        $html = str_replace("<!--_***PHP_Goes_Here***_-->", $content, $html);
+    
+        echo $html;
     }
 
-    function check_account(){
+    if ($_POST["password"] == $_POST["passwordconfirm"]){
         $servername = "localhost";
         $username = "root";
         $password = "";
@@ -33,8 +41,7 @@
             }
         }
         else {
-            echo "error";
-            include ("createAccount.html");
+            $succes = true;
         }
 
         $conn->close();
@@ -42,22 +49,23 @@
         if ($succes == true){
             $conn = new mysqli($servername, $username, $password, $dbname);
             $sql = "INSERT INTO accounts (username, password) VALUES ('$_POST[username]', '$_POST[password]')";
-
-            //$conn->query($sql);
             
+            // success
             if ($conn->query($sql) === TRUE) {
-                echo "Account created succesfully";
                 $_SESSION["username"] = $_POST["username"];
-                include ("forms.php");
+                header("Location: forms.php");
             } 
             else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
+                createAccountError("seems like we are having server issues, please try again later");
             }
+
             $conn->close();
         }
         else{
-            echo "username is taken, please choose another one <br> <br>";
-            include ("createAccount.html");
+            createAccountError("username is taken, please choose another one");
         }
+    }
+    else{
+        createAccountError("passwords does not match, please try again");
     }
 ?>

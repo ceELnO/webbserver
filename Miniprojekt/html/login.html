@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="icon" href="../img/Logo.png">
+
+    <!-- External Links-->
+    <link href = "../css/main.css" type = "text/css" rel = "stylesheet">
+    <link href = "../css/accounts.css" type = "text/css" rel = "stylesheet">
+</head>
+<body>
+
+    <!--_***PHP_Goes_Here***_-->
+
+    <div class = "left_margin">
+        <h3> Log in </h3>
+
+        <div class = "forum_container">
+            <form method = "post" action = "../php/loginTry.php">
+                <label for = "username"> Username: </label> <br>
+                <input type = "text" name = "username">
+                <br> <br>
+    
+                <label for = "password"> Password: </label> <br>
+                <input type = "password" name = "password">
+                <br> <br>
+    
+                <input type = "submit" value = "Submit">
+            </form>
+        </div>
+    
+        <div class = "redirect">
+            <a href = "../php/createAccount.php">
+                <p> Don't have a account? Click here </p>
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>

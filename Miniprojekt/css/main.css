@@ -1,0 +1,68 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+/* ----- ----- ----- Header ----- ----- ----- */
+
+.header{
+    width: 100%;
+    height: auto;
+    margin: 0%;
+    padding: 0%;
+    background-color: #DC0032;
+}
+/* Logo */
+.header_logo{
+    display: inline-block;
+    height: 46px;
+    margin: 0%;
+    vertical-align: bottom;
+}
+#logo_1{
+    width: 100%;
+    height: 100%;
+}
+
+/* Links */
+.header ul{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0%;
+    padding: unset;
+}
+.header ul li{
+    display: inline-block;
+    margin: 0%;
+}
+.header ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin: 0%;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 18px;
+    padding-left: 18px;
+}
+.header ul li a:hover{
+    background-color: black;
+    color: aqua;
+}
+
+/* ----- ----- ----- Forms ----- ----- ----- */
+
+input[type=text]{
+    width: unset;
+}
+
+
+/* ----- ----- ----- Misc ----- ----- ----- */
+
+.left_margin{
+    width: auto;
+    height: auto;
+    margin-left: 2px;
+}

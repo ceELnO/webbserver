@@ -1,0 +1,29 @@
+/* orgin entry */
+.form_container{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+    margin: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(220, 0, 50, 0.1) /*#dc0032*/
+}
+.form_container p{
+    font-size: 16px;
+    display: inline;
+}
+
+/* comments */
+.forms_container{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+    margin: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(220, 0, 50, 0.1) /*#dc0032*/
+}
+.forms_container p{
+    font-size: 15px;
+    display: inline;
+}

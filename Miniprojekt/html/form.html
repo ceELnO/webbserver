@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="icon" href="../img/Logo.png">
+
+    <!-- External Links-->
+    <link href = "../css/main.css" type = "text/css" rel = "stylesheet">
+    <link href = "../css/description.css" type = "text/css" rel = "stylesheet">
+    <link href = "../css/form.css" type = "text/css" rel = "stylesheet">
+</head>
+<body>
+    
+    <!--_***PHP_Goes_Here***_-->
+
+    <div class = "left_margin">
+        <h3> Form </h3>
+    </div>
+
+    <!--_***_Orgin_Entry_Goes_here_***_-->
+
+    <!--_***_Entrys_Goes_Here_***_-->
+
+    <div class = "left_margin">
+        <h4> Contribute to the discussion </h4>
+
+        <!-- new entry -->
+        <form action = "formNewEntry.php" method = "post" >
+            <label for = "title"> Title: </label> <br>
+            <input type = "text" name = "title" required>
+            <br> <br>
+    
+            <label for = "description"> Description: </label> <br>
+            <input type = "textarea" name = "description" required>
+            <br> <br>
+    
+            <input type = "hidden" name = "commented_form" value = "<!--_***_Value_***_-->" >
+    
+            <input type = "submit" value = "Submit">
+        </form>
+
+    </div>
+
+</body>
+</html>

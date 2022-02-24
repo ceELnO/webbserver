@@ -1,0 +1,37 @@
+Accounts sql
+
+All accounts are done here
+
+Database: Miniprojekt
+
+    these are needed:
+
+        create table accounts(
+            id int(16) AUTO_INCREMENT,
+            username varchar(256),
+            password varchar(256),
+            time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            KEY (id)
+        )
+
+        create table forms(
+            id int(255),
+            title varchar(256),
+            description varchar(1024),
+            user varchar(256),
+            time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            KEY (id)
+        )
+
+Database: Miniprojekt_forms
+
+    make table for each post, these are auto generated in createFormTry.php
+
+    create table x(
+        id int(16) AUTO_INCREMENT,
+        title varchar(256),
+        description varchar(1024),
+        user varchar(256),
+        time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        KEY (id)
+    )
