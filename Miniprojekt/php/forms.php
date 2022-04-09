@@ -20,8 +20,8 @@
                 <a href='form.php?viewproduct=".urlencode($row["id"])."' class = 'form_link'>
                     <div class = 'form_container'>
                         <p>
-                        
-                            <b> $row[title] </b> by <i> $row[user]</i> at $row[time]: &emsp; $row[description] 
+                            <b> $row[title] </b> by <i> $row[user]</i> at $row[time]: 
+                            <br> $row[description] 
                         
                         </p>
                     </div>
