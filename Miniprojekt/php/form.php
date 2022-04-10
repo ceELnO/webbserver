@@ -31,7 +31,8 @@
             $conn->close();
         }
         else{
-            $potential_user_message = "you are not logged in, log in in order to post comments";
+            $potential_user_message = "you are not logged in, log in in order to post comments <br>
+            <a href = 'forms.php'> click here to log in </a>";
         }
     }
 
@@ -44,7 +45,8 @@
         $formId = strval($formId);
     }
     else{
-        echo "unexpected error";
+        echo "could not determine which form we are viewing <br>
+        <a href = 'forms.php'> click here to view forms </a>";
         return;
     }
 
@@ -97,6 +99,12 @@
     $sql2 = "SELECT title, description, user, time FROM $tablename";
     $result2 = $conn2->query($sql2);
 
+    // check if $result2->num_rows is defined to avoid errors; it's undefined if the table ($tablename) is undefined
+    if (isset($result2->num_rows) == false){
+        die("The server could not find the form you are looking for <br>
+        <a href = 'forms.php'> click here to view our forms </a>");
+    }
+
     if ($result2->num_rows > 0) {
         $text = "";
         while($row = $result2->fetch_assoc()) {
@@ -130,6 +138,7 @@
     $html = str_replace("<!--_***_Entrys_Goes_Here_***_-->", $text, $html);
     $html = str_replace("<!--_***_Value_***_-->", $tablename, $html);
 
+    // message if the user tries to post something on the form
     if(isset($potential_user_message)){
         $error = file_get_contents("../txt/messagebox.txt");
         $error = str_replace("***text_message***", $potential_user_message, $error);

@@ -1,6 +1,9 @@
----------- ---------- ---------- Main ---------- ---------- ----------
+---------- ---------- ---------- Misc ---------- ---------- ----------
 
+The files which should only be opened by users are the php files, which are in the php folder.
 
+Remember that if you reset the SQL tables you may be wish to reset "id_gen.txt" to just containing "1",
+The file is found in the "txt" folder.
 
 ---------- ---------- ---------- SQL ---------- ---------- ----------
 Database: Miniprojekt
