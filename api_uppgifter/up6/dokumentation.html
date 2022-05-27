@@ -1,0 +1,30 @@
+<html>
+<body>
+    <h1>Dokumentation av det här APIet</h1>
+    <h2>Routes</h2>
+
+    <ul>
+
+        <li>
+            <em>POST /users</em> - skapar en ny användare, accepterar JSON objekt på formatet
+            {"firstname": "", "lastname": "", "userId": "unikt namn", "passwd": ""}. 
+            <code>userId</code> är obligatoriskt.
+        </li>
+
+        <li>
+            <em>put /users/:id</em> - updatera användarattributer, accepterar JSON objekt på formatet
+            {"firstname": "", "lastname": "",}. 
+            alltingen <code>firstname</code> eller <code>lastname</code> är obligatoriskt.
+        </li>
+
+        <li>
+            <em>POst /login</em> - logga in, accepterar JSON objekt på formatet
+            {"firstname": "", "lastname": "",}. 
+            <code>userId</code> och <code>passwd</code> är obligatoriskt.
+        </li>
+
+    </ul>
+
+</body>
+
+</html>
