@@ -6,21 +6,33 @@
     <ul>
 
         <li>
-            <em>POST /users</em> - skapar en ny användare, accepterar JSON objekt på formatet
+            <em>POST /users</em> - skapar en ny användare, accepterar JSON objekt på formatet:
             {"firstname": "", "lastname": "", "userId": "unikt namn", "passwd": ""}. 
             <code>userId</code> är obligatoriskt.
         </li>
 
         <li>
-            <em>put /users/:id</em> - updatera användarattributer, accepterar JSON objekt på formatet
-            {"firstname": "", "lastname": "",}. 
+            <em>PUT /users/:id</em> - updatera användarattributer, accepterar JSON objekt på formatet:
+            {"firstname": "", "lastname": "", "userId": ""}. 
             alltingen <code>firstname</code> eller <code>lastname</code> är obligatoriskt.
         </li>
 
         <li>
-            <em>POst /login</em> - logga in, accepterar JSON objekt på formatet
+            <em>POST /login</em> - logga in, accepterar JSON objekt på formatet; returnerar en token som krävs för visa routes:
             {"firstname": "", "lastname": "",}. 
             <code>userId</code> och <code>passwd</code> är obligatoriskt.
+        </li>
+
+        <li>
+            <em>GET /getusers</em> - visar regristerade användare, accepterar JSON objekt på formatet:
+            {"token": ""}. 
+            <code>token</code> är obligatoriskt.
+        </li>
+
+        <li>
+            <em>GET /getuserme</em> - visar den inloggade användares attributer, accepterar JSON objekt på formatet:
+            {"userId": "", token": ""}. 
+            <code>token</code> är obligatoriskt.
         </li>
 
     </ul>
